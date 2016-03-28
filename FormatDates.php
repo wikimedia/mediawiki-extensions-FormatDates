@@ -15,16 +15,18 @@ if( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-$wgAutoloadClasses['DateParser'] = dirname( __FILE__ ) . '/DateParser.php';
-$wgAutoloadClasses['FormattableDate'] = dirname( __FILE__ ) . '/FormattableDate.php';
-$wgHooks['ParserFirstCallInit'][] = 'efFormatDatesSetHook';
-
 $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'Date Formatter',
 	'author' => 'Rob Church',
-	'description' => 'Supports refactoring of unlinked dates through the <code><nowiki><date></nowiki></code> tag',
+	'descriptionmsg' => 'dateformatter-desc',
 );
+
+$wgMessagesDirs['DateFormatter'] = __DIR__ . '/i18n';
+
+$wgAutoloadClasses['DateParser'] = __DIR__ . '/DateParser.php';
+$wgAutoloadClasses['FormattableDate'] = __DIR__ . '/FormattableDate.php';
+$wgHooks['ParserFirstCallInit'][] = 'efFormatDatesSetHook';
 
 function efFormatDatesSetHook( $parser ) {
 	$parser->setHook( 'date', 'efFormatDate' );
