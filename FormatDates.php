@@ -19,7 +19,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'Date Formatter',
 	'author' => 'Rob Church',
-	'descriptionmsg' => 'dateformatter-desc',
+	'descriptionmsg' => 'formatdates-desc',
 );
 
 $wgMessagesDirs['DateFormatter'] = __DIR__ . '/i18n';
