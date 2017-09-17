@@ -6,7 +6,7 @@
  *
  * @ingroup Extensions
  * @author Rob Church <robchur@gmail.com>
- * Please see the LICENCE file for terms of use and redistribution
+ * Please see the LICENSE file for terms of use and redistribution
  */
 class DateParser {
 
