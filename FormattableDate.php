@@ -25,7 +25,6 @@ class FormattableDate {
 	}
 	
 	public function format( $pref ) {
-		wfProfileIn( __METHOD__ );
 		$this->resolveMonths();
 		$format = $this->determineFormat( $pref );
 		$format = str_replace( 'j', $this->day, $format ); # day w/o l.z.
@@ -34,7 +33,6 @@ class FormattableDate {
 		$format = str_replace( 'm', $this->pad( $this->month ), $format ); # month w/ l.z.
 		$format = str_replace( 'Y', $this->year, $format ); # year, 4 digit
 		$format = str_replace( 'F', $this->monthName, $format ); # month text
-		wfProfileOut( __METHOD__ );
 		return $format;
 	}
 	
