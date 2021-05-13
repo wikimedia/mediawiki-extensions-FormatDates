@@ -34,13 +34,14 @@ function efFormatDatesSetHook( $parser ) {
 }
 
 function efFormatDate( $text, $args, &$parser ) {
-	global $wgUseDynamicDates, $wgContLang;
+	global $wgUseDynamicDates;
 	if( $wgUseDynamicDates ) {
-		$dp = new DateParser( $wgContLang, DateParser::convertPref( $parser->getOptions()->getDateFormat() ) );
+		$dp = new DateParser(
+			\MediaWiki\MediaWikiServices::getInstance()->getContentLanguage(),
+			DateParser::convertPref( $parser->getOptions()->getDateFormat() )
+		);
 		return $dp->reformat( $text );
 	} else {
 		return $text;
 	}
 }
-
-
