@@ -1,4 +1,5 @@
 {
+	"name": "FormatDates",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
