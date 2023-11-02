@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"formatdates-desc": "Ondersteunt het opnieuw opmaken van niet-gekoppelde datums via de tag <code><nowiki><date></nowiki></code>"
+}
