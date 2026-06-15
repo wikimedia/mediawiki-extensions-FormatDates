@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"formatdates-desc": "Podporuje refaktorovanie neprepojených dátumov pomocou značky <code><nowiki><date></nowiki></code>"
+}
